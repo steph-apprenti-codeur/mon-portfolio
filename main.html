@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/bulma.css">
+    <link rel="stylesheet" href="assets/style/fontawesome.css">
+    <link rel="stylesheet" href="assets/style/all.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="assets/images/IMG_0253.JPG" type="image/x-icon">
+    <title>Mon portfolio</title>
+</head>
+
+<body>
+
+    <body>
+
+        <div id="app">
+            <div class="container1">
+                <div class="navbar ">
+                    <div class="navbar-start">
+                        <router-link to="/">
+                            <i class="fas fa-code"></i> JustCode
+                        </router-link>
+                    </div>
+                    <div class="navbar-center">
+                        <i class="fa fa-align-justify"></i>
+                    </div>
+                    <div class="navbar-end">
+                        <router-link to="/">
+                            <a href="#">home</a>
+                        </router-link>
+                        <router-link to="/contact">
+                            <a href="#">Mon portfolio</a>
+                        </router-link>
+                    </div>
+                </div>
+
+            </div>
+            <router-view></router-view>
+        </div>
+
+        <script type="text/x-template" id="home">
+            <div :class="{ container2Unique: unique, container2Craft: craft, container2Discover: discover, container2Zoom: zoom}" id="cont">
+                <div class="aside">
+                    <h6 class="title">choose</h6>
+
+                </div>
+                <div  :class="{black: unique || craft, white: discover || zoom}" class="section">
+                    <h1 :class="{black: unique || craft, white: discover || zoom}" @click="uniqu()" class="title" id="unique">CREATION</h1>
+                    <h3  :class="{black: unique || craft, white: discover || zoom}" @click="craftt()" class="title" id="craft">EQUIPE</h3>
+                    <h4  :class="{black: unique || craft, white: discover || zoom}" @click="discovery()" class="title" id="discover">UNIQUE</h4>
+                    <h5  :class="{black: unique || craft, white: discover || zoom}" @click="zoome()" class="title" id="zoom">DESIGN</h5>
+                </div>
+               
+                <footer class="footer" :class="{black: unique || craft, white: discover || zoom}">
+                    <i :class="{black: unique || craft}" class="fab fa-facebook fa-2x"></i>
+                    <i :class="{black: unique || craft }" class="fab fa-instagram fa-2x"></i>   @stephano tgl
+                </footer>
+            </div>
+        </script>
+
+        <script type="text/x-template" id="contact">
+            <transition name="fade" appear mode="in-out">
+            <div class="container3">
+                
+                <div class="banner">
+
+                    <div class="card" id="first-card">
+                        <div class="card-header">
+                            <h1 class="title is-centered" id="ptf">Mon portfolio</h1>
+                        </div>
+                        <div class="card-contente">
+                            <img src="assets/images/IMG_2799.JPG" alt="">
+                        </div>
+                        <div class="card-social-media ">
+                            <a href="https://www.facebook.com/profile.php?id=100010000725492" class="has-text-dark"><i  :class="{show: show, hide: !show}" class="fab fa-facebook"></i></a>
+                            <a href="#" class="has-text-dark"><i :class="{show: show, hide: !show}" class="fab fa-linkedin"></i></a>
+                            <a href="#" class="has-text-dark"><i :class="{show: show, hide: !show}" class="fab fa-instagram"></i></a>
+                            <a href="https://github.com/steph-apprenti-codeur" class="has-text-dark"><i :class="{show: show, hide: !show}" class="fab fa-github"></i></a>
+                        </div>
+                        <div class="card-links">
+                            <h1 class="subtitle">Contactez nous pour<br> plus d'infos</h1>
+                            <button @click="show = !show" class="button">contact</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container about">
+                    <div class="columns">
+                        <!--chaque card-->
+
+                        <div class="column about-single-element is-4">
+                            <div class="card has-background-light" id="card">
+                                <div class="card-image">
+                                    <img src="assets/images/IMG_2849.JPG" >
+                                </div>
+                                <div class="card-contente">
+                                    <h2 class="subtitle">Card title</h2>
+                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, cupiditate?</h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="card-footer-item">
+                                        <span class="icon has-text-link">
+                                            <i class="fab fa-facebook"></i>
+                                        </span>
+                                        <a href="#" class="has-text-link">stephano tgl</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--chaque card-->
+
+                        <div class="column about-single-element is-4">
+                            <div class="card has-color-white" id="card">
+                                <div class="card-image">
+                                    <img src="assets/images/IMG_2848.JPG" >
+                                </div>
+                                <div class="card-contente">
+                                    <h2 class="subtitle">Card title</h2>
+                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, cupiditate?</h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="card-footer-item">
+                                        <i class="fas fa-envelope"></i> 
+                                        <a href="#" class="has-text-link">contact us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--chaque card-->
+
+                        <div class="column about-single-element is-4">
+                            <div class="card has-background-white" id="card">
+                                <div class="card-image">
+                                    <img src="assets/images/IMG_2858.JPG" >
+                                </div>
+                                <div class="card-contente">
+                                    <h2 class="subtitle">Card title</h2>
+                                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, cupiditate?</h3>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="card-footer-item">
+                                        <i class="fas fa-envelope"></i> 
+                                        <a href="#" class="has-text-link">email</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--chaque card-->
+                    </div>
+                </div>
+
+
+                <div class="columns is-mobile">
+                    <!--chaque card-->
+                    <div class="column is-4">
+                        <div class="card has-background-dark has-text-white" @mouseover="" @mouseout="">
+                            <transition name="show">
+                                <div class="modale" v-if="modalshow1">
+                                    <div class="checkbox">
+                                        <div class="consult has-text-white">
+                                            <p class="content">consulter</p>
+                                        </div>
+                                        <div class="likebox has-text-danger">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </transition>
+                            <div class="cardheader">
+                                <div class="icon has-text-orange" style="margin-top: 25px;">
+                                    <i class="fab fa-instagram fa-6x"></i>
+                                </div>
+                                <div class="card-link" >
+                                    <div class=" card-title ">
+                                        <h1 class="subtitle content" >Instagram UI</h1>    
+                                    </div>
+                                   <div>
+                                    <p class="has-background-instagram">open</p>
+                                   </div>
+                                    <div class="card-icon">
+                                        <i class="fab fa-apple"></i>
+                                        <i class="fab fa-android"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="block">
+                                    <div class="subtitle card-title">
+                                        Lorem ipsum dolor.
+                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, consequuntur!
+                                    </p>
+                                </div>
+                                <div class="card-item">
+                                    <h3 class="subtitle is-5">technologie used</h3>
+                                    <div class="cardfooter" style="display: flex; justify-content: space-around;">
+                                        <span class="has-text-success">
+                                            <i class="fab fa-vuejs"></i>
+                                        </span>
+                                        <span class="has-text-orange">
+                                            <i class="fab fa-html5"></i>
+                                        </span>
+                                        <span class="has-text-purple">
+                                            <i class="fab fa-bootstrap"></i>
+                                        </span>
+                                        <span class="has-text-link">
+                                            <i class="fab fa-css3"></i>
+                                        </span>
+
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                        <!--chaque card-->
+                        
+                    <div class="column is-4">
+                        <div class="card" @mouseover="modalshow = !modalshow" @mouseout="modalshow = !modalshow">
+                            <transition name="show">
+                                <div class="modale" v-if="modalshow">
+                                    <div class="checkbox">
+                                        <div class="consult ">
+                                            <div class="button is-danger is-small is-outlined">
+                                                <p class="content">consulter</p>
+                                            </div>
+                                        </div>                            
+                                        <div class="button icon is-danger is-outlined">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </transition>
+                            <div class="cardheader">
+                                <div class="icon has-text-link" style="margin-top: 25px;">
+                                    <i class="fab fa-facebook-square fa-6x"></i>
+                                </div>
+                                <div class="card-link" >
+                                    <div class=" card-title ">
+                                        <h1 class="subtitle content">Facebook ui</h1>
+                                    </div>
+                                   <div>
+                                    <p class="has-background-link">open</p>
+                                   </div>
+                                    <div class="card-icon">
+                                        <i class="fab fa-apple"></i>
+                                        <i class="fab fa-android"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <div class="block">
+                                    <div class="subtitle card-title">
+                                        Lorem ipsum dolor.
+                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, consequuntur!
+                                    </p>
+                                </div>
+                                <div class="card-item">
+                                    <h3 class="subtitle is-5">technologie used</h3>
+                                    <div class="cardfooter" style="display: flex; justify-content: space-around;">
+                                        <span class="has-text-success">
+                                            <i class="fab fa-vuejs"></i>
+                                        </span>
+                                        <span class="has-text-orange">
+                                            <i class="fab fa-html5"></i>
+                                        </span>
+                                        <span class="has-text-purple">
+                                            <i class="fab fa-bootstrap"></i>
+                                        </span>
+                                        <span class="has-text-link">
+                                            <i class="fab fa-css3"></i>
+                                        </span>
+
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--chaque card-->
+                </div>
+            </div>
+        </transition>
+        </script>
+        <script src="assets/js/vue.js"></script>
+        <script src="assets/js/vue-router.js"></script>
+        <script src="assets/js/scrollreveal.js"></script>
+        <script src="assets/js/app.js"></script>
+    </body>
+
+</html>
